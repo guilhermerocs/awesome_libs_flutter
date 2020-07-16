@@ -80,14 +80,11 @@ class _LoginPageState extends State<LoginPage> {
 
                 Observer(
                   builder: (_) {
-                    return Hero(
-                      tag: "entrar_button",
-                      child: new CustomButton(
-                          labelText: "LOGIN",
-                          color: Constants.buttonGreenColor,
-                          isLoading: viewModel.isLoading,
-                          onClick: viewModel.loginPressed),
-                    );
+                    return new CustomButton(
+                        labelText: "LOGIN",
+                        color: Constants.buttonGreenColor,
+                        isLoading: viewModel.isLoading,
+                        onClick: viewModel.loginPressed);
                   },
                 ),
               ],

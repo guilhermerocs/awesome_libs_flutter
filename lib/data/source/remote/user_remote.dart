@@ -8,11 +8,11 @@ import 'package:awsome_libs_flutter/domain/models/body/loginBody.dart';
 import 'package:awsome_libs_flutter/domain/models/entity/user_model.dart';
 
 class UserRemote {
-  final _meuSpaApiService = serviceLocator<ApiService>();
+  final _apiService = serviceLocator<ApiService>();
 
   Future<UserModel> login(String login, String password) async {
     LoginBody loginBody = LoginBody(email: login, password: password);
-    final response = await _meuSpaApiService.loginUser(loginBody.toJson());
+    final response = await _apiService.loginUser(loginBody.toJson());
 
     var loginResult = response.body;
     if (loginResult != null && loginResult.user != null) {
