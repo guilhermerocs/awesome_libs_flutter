@@ -1,8 +1,5 @@
 import 'dart:async';
-
 import 'package:chopper/chopper.dart';
-import 'package:connectivity/connectivity.dart';
-
 import 'error_handler.dart';
 
 class MobileDataInterceptor implements RequestInterceptor, ResponseInterceptor {

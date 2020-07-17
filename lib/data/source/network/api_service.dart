@@ -1,23 +1,20 @@
 import 'dart:convert';
 import 'dart:io';
-
-
+import 'package:awesome_libs_flutter/domain/models/body/loginBody.dart';
 import 'package:awesome_libs_flutter/domain/models/result/login_result.dart';
 import 'package:awesome_libs_flutter/domain/models/entity/user_model.dart';
 import 'package:chopper/chopper.dart';
-
 import 'mobile_data_interceptor.dart';
-
 import 'package:http/io_client.dart' as http;
+
 part 'api_service.chopper.dart';
 
 @ChopperApi(baseUrl: '/')
 abstract class ApiService extends ChopperService {
   @Post(path: 'auth/login')
-  Future<Response<LoginResult>> loginUser(@Body() Map<String, dynamic> body);
+  Future<Response<LoginResult>> loginUser(@Body() LoginBody  body);
 
-  static ApiService create([ChopperClient client]) =>
-      _$ApiService(client);
+  static ApiService create([ChopperClient client]) => _$ApiService(client);
 }
 
 class ApiClient {
@@ -25,23 +22,23 @@ class ApiClient {
 
   ApiClient()
       : chopperClient = ChopperClient(
-      baseUrl: 'REPLACE_WITH_YOUR_API_URL',
-      client: http.IOClient(
-          HttpClient()
-            ..connectionTimeout = const Duration(seconds: 10)),
-      services: [
-        _$ApiService(),
-      ],
-      interceptors: [
-        MobileDataInterceptor(),
-        HttpLoggingInterceptor(),
-        HeadersInterceptor({'Cache-Control': 'no-cache'}),
-        HeadersInterceptor({'Content-Type': 'application/json'})
-      ],
-      converter: JsonToTypeConverter({
-        LoginResult: (jsonData) => LoginResult.fromJson(jsonData),
-        UserModel: (jsonData) => UserModel.fromJson(jsonData),
-      }));
+            baseUrl: 'REPLACE_WITH_YOUR_API_URL',
+            client: http.IOClient(
+                HttpClient()..connectionTimeout = const Duration(seconds: 10)),
+            services: [
+              _$ApiService(),
+            ],
+            interceptors: [
+              MobileDataInterceptor(),
+              HttpLoggingInterceptor(),
+              HeadersInterceptor({'Cache-Control': 'no-cache'}),
+              HeadersInterceptor({'Content-Type': 'application/json'})
+            ],
+            converter: JsonToTypeConverter({
+              LoginResult: (jsonData) => LoginResult.fromJson(jsonData),
+              LoginBody: (jsonData) => LoginBody.fromJson(jsonData),
+              UserModel: (jsonData) => UserModel.fromJson(jsonData),
+            }));
 }
 
 class JsonToTypeConverter extends JsonConverter {

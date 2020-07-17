@@ -1,15 +1,9 @@
 import 'dart:convert';
-
-
 import 'package:awesome_libs_flutter/domain/models/entity/user_model.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class UserLocal {
   static const String CURRENT_USER = "currentUser";
-
-  static const String TOKEN = "token";
-
-  static const String NULL = "null";
 
   Future<void> saveCurrentUser(UserModel userModel) async {
     SharedPreferences prefs = await SharedPreferences.getInstance();

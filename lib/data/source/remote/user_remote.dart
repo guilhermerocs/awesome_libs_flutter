@@ -1,7 +1,3 @@
-
-
-
-
 import 'package:awesome_libs_flutter/data/source/network/api_service.dart';
 import 'package:awesome_libs_flutter/di/global_providers.dart';
 import 'package:awesome_libs_flutter/domain/models/body/loginBody.dart';
@@ -12,7 +8,7 @@ class UserRemote {
 
   Future<UserModel> login(String login, String password) async {
     LoginBody loginBody = LoginBody(email: login, password: password);
-    final response = await _apiService.loginUser(loginBody.toJson());
+    final response = await _apiService.loginUser(loginBody);
 
     var loginResult = response.body;
     if (loginResult != null && loginResult.user != null) {

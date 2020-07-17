@@ -17,7 +17,7 @@ class _$ApiService extends ApiService {
   final definitionType = ApiService;
 
   @override
-  Future<Response<LoginResult>> loginUser(Map<String, dynamic> body) {
+  Future<Response<LoginResult>> loginUser(LoginBody body) {
     final $url = '/auth/login';
     final $body = body;
     final $request = Request('POST', $url, client.baseUrl, body: $body);
