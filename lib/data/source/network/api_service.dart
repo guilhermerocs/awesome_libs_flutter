@@ -24,7 +24,7 @@ class ApiClient {
 
   ApiClient()
       : chopperClient = ChopperClient(
-      baseUrl: '',
+      baseUrl: 'REPLACE_WITH_YOUR_API_URL',
       client: http.IOClient(
           HttpClient()
             ..connectionTimeout = const Duration(seconds: 10)),
