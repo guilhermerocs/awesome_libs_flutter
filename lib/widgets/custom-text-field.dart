@@ -1,4 +1,4 @@
-import 'package:awsome_libs_flutter/utils/constants.dart';
+import 'package:awesome_libs_flutter/utils/constants.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';

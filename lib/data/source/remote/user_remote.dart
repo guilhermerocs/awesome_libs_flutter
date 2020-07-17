@@ -2,10 +2,10 @@
 
 
 
-import 'package:awsome_libs_flutter/data/source/network/api_service.dart';
-import 'package:awsome_libs_flutter/di/global_providers.dart';
-import 'package:awsome_libs_flutter/domain/models/body/loginBody.dart';
-import 'package:awsome_libs_flutter/domain/models/entity/user_model.dart';
+import 'package:awesome_libs_flutter/data/source/network/api_service.dart';
+import 'package:awesome_libs_flutter/di/global_providers.dart';
+import 'package:awesome_libs_flutter/domain/models/body/loginBody.dart';
+import 'package:awesome_libs_flutter/domain/models/entity/user_model.dart';
 
 class UserRemote {
   final _apiService = serviceLocator<ApiService>();

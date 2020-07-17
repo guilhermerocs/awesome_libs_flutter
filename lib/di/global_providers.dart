@@ -1,9 +1,9 @@
-import 'package:awsome_libs_flutter/data/repository/user_repository.dart';
-import 'package:awsome_libs_flutter/data/source/local/user_local.dart';
-import 'package:awsome_libs_flutter/data/source/network/api_service.dart';
-import 'package:awsome_libs_flutter/data/source/remote/user_remote.dart';
-import 'package:awsome_libs_flutter/domain/usecase/login_usecase.dart';
-import 'package:awsome_libs_flutter/ui/viewmodel/login_viewModel.dart';
+import 'package:awesome_libs_flutter/data/repository/user_repository.dart';
+import 'package:awesome_libs_flutter/data/source/local/user_local.dart';
+import 'package:awesome_libs_flutter/data/source/network/api_service.dart';
+import 'package:awesome_libs_flutter/data/source/remote/user_remote.dart';
+import 'package:awesome_libs_flutter/domain/usecase/login_usecase.dart';
+import 'package:awesome_libs_flutter/ui/viewmodel/login_viewModel.dart';
 import 'package:get_it/get_it.dart';
 
 

@@ -1,4 +1,4 @@
-package br.com.guilhermerocha.awsome_libs_flutter
+package br.com.guilhermerocha.awesome_libs_flutter
 
 import io.flutter.embedding.android.FlutterActivity
 

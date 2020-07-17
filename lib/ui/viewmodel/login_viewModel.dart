@@ -1,7 +1,7 @@
-import 'package:awsome_libs_flutter/di/global_providers.dart';
-import 'package:awsome_libs_flutter/domain/models/entity/user_model.dart';
-import 'package:awsome_libs_flutter/domain/usecase/login_usecase.dart';
-import 'package:awsome_libs_flutter/utils/utils.dart';
+import 'package:awesome_libs_flutter/di/global_providers.dart';
+import 'package:awesome_libs_flutter/domain/models/entity/user_model.dart';
+import 'package:awesome_libs_flutter/domain/usecase/login_usecase.dart';
+import 'package:awesome_libs_flutter/utils/utils.dart';
 import 'package:mobx/mobx.dart';
 
 part 'login_viewModel.g.dart';

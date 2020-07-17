@@ -1,4 +1,4 @@
-import 'package:awsome_libs_flutter/utils/utils.dart';
+import 'package:awesome_libs_flutter/utils/utils.dart';
 
 class ErrorHandler {
   static void handleResponseError(int code, String message) {

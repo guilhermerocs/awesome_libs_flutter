@@ -1,2 +1,2 @@
-# awsome_libs_flutter
+# awesome_libs_flutter
 

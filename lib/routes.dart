@@ -1,5 +1,5 @@
-import 'package:awsome_libs_flutter/ui/view/home_page.dart';
-import 'package:awsome_libs_flutter/ui/view/login_page.dart';
+import 'package:awesome_libs_flutter/ui/view/home_page.dart';
+import 'package:awesome_libs_flutter/ui/view/login_page.dart';
 import 'package:flutter/material.dart';
 
 class Routes {

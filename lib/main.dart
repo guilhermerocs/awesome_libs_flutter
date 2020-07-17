@@ -1,10 +1,10 @@
 
 import 'dart:io';
 
-import 'package:awsome_libs_flutter/routes.dart';
-import 'package:awsome_libs_flutter/ui/view/login_page.dart';
-import 'package:awsome_libs_flutter/utils/constants.dart';
-import 'package:awsome_libs_flutter/utils/utils.dart';
+import 'package:awesome_libs_flutter/routes.dart';
+import 'package:awesome_libs_flutter/ui/view/login_page.dart';
+import 'package:awesome_libs_flutter/utils/constants.dart';
+import 'package:awesome_libs_flutter/utils/utils.dart';
 import 'package:flutter/material.dart';
 
 import 'di/global_providers.dart';

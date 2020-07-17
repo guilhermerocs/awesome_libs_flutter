@@ -1,4 +1,4 @@
-import 'package:awsome_libs_flutter/domain/models/entity/user_model.dart';
+import 'package:awesome_libs_flutter/domain/models/entity/user_model.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 part 'login_result.g.dart';

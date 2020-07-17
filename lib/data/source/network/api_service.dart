@@ -1,8 +1,9 @@
 import 'dart:convert';
 import 'dart:io';
 
-import 'package:awsome_libs_flutter/domain/models/entity/user_model.dart';
-import 'package:awsome_libs_flutter/domain/models/result/login_result.dart';
+
+import 'package:awesome_libs_flutter/domain/models/result/login_result.dart';
+import 'package:awesome_libs_flutter/domain/models/entity/user_model.dart';
 import 'package:chopper/chopper.dart';
 
 import 'mobile_data_interceptor.dart';

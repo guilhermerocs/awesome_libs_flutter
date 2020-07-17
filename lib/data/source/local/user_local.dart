@@ -1,7 +1,7 @@
 import 'dart:convert';
 
 
-import 'package:awsome_libs_flutter/domain/models/entity/user_model.dart';
+import 'package:awesome_libs_flutter/domain/models/entity/user_model.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class UserLocal {

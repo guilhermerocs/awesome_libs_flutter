@@ -1,8 +1,8 @@
-import 'package:awsome_libs_flutter/data/source/local/user_local.dart';
-import 'package:awsome_libs_flutter/data/source/remote/user_remote.dart';
-import 'package:awsome_libs_flutter/di/global_providers.dart';
-import 'package:awsome_libs_flutter/domain/models/entity/user_model.dart';
-import 'package:awsome_libs_flutter/domain/repository/user_repository.dart';
+import 'package:awesome_libs_flutter/data/source/local/user_local.dart';
+import 'package:awesome_libs_flutter/data/source/remote/user_remote.dart';
+import 'package:awesome_libs_flutter/di/global_providers.dart';
+import 'package:awesome_libs_flutter/domain/models/entity/user_model.dart';
+import 'package:awesome_libs_flutter/domain/repository/user_repository.dart';
 
 class UserRepository implements IAUserRepository {
   final _userRemote = serviceLocator<UserRemote>();
