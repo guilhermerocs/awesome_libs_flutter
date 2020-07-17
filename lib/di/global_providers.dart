@@ -6,7 +6,6 @@ import 'package:awesome_libs_flutter/domain/usecase/login_usecase.dart';
 import 'package:awesome_libs_flutter/ui/viewmodel/login_viewModel.dart';
 import 'package:get_it/get_it.dart';
 
-
 final GetIt serviceLocator = GetIt.I;
 
 Future<void> setupLocator() async {
@@ -15,19 +14,20 @@ Future<void> setupLocator() async {
       () => ApiService.create(ApiClient().chopperClient));
 
   //Repositories
-  serviceLocator
-      .registerLazySingleton<UserRepository>(() => new UserRepository());
-  serviceLocator
-      .registerLazySingleton<UserRemote>(() => new UserRemote());
-  serviceLocator
-      .registerLazySingleton<UserLocal>(() => new UserLocal());
+  serviceLocator.registerLazySingleton<UserRepository>(() => new UserRepository(
+      userLocal: serviceLocator<UserLocal>(),
+      userRemote: serviceLocator<UserRemote>()));
+
+  serviceLocator.registerLazySingleton<UserRemote>(
+      () => new UserRemote(apiService: serviceLocator<ApiService>()));
+
+  serviceLocator.registerLazySingleton<UserLocal>(() => new UserLocal());
 
   //ViewModels
   serviceLocator
       .registerLazySingleton<LoginViewModel>(() => new LoginViewModel());
 
-
   //UseCases
-  serviceLocator
-      .registerLazySingleton<LoginUseCase>(() => new LoginUseCase());
+  serviceLocator.registerLazySingleton<LoginUseCase>(
+      () => new LoginUseCase(userRepository: serviceLocator<UserRepository>()));
 }
